@@ -1,4 +1,4 @@
-# Radial-Schrodinger
+# Radial-Schroedinger
 
 ## Objectives
 
