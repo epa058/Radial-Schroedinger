@@ -13,15 +13,16 @@ The algorithm was tested on both the Coulomb potential and the Woods–Saxon pot
 ## Description
 
 We break down the main file functions and interdependencies:
-**main_schroedinger.c**: This is the primary file users should open first. It acts as the entry point of the program, orchestrating the overall process of solving the Schrödinger equation. It assembles the pieces of the algorithm and records the results. Mainly, it calls on:
-- **schroedinger.c**: This file contains the central processes in solving the Schrödinger equation, with specific emphasis on wavefunction evolution. This file calls on:
-  - **numerov.c**: This file implements the Numerov method.
-  - **radial_eq_functions.c**: This file contains functions defining the potentials as well as the forward and backward evolution functions for some ODEs.
 
-**init.c**: This file sets up the necessary initial parameters and variables. It prepares the necessary environment and values for the solver to function accurately. It is called by **schroedinger.c** and **main_schroedinger.c**. This file calls on:
-- **extremum.c**: This file contains functions to find extremum points and the value of the second derivative at those points.
-- **solve.c**: This file contains various search methods like Newton's method or the bisection search.
-- **derivatives.c**: This file is responsible for computing the first and second derivatives.
+- **main_schroedinger.c**: This is the primary file users should open first. It acts as the entry point of the program, orchestrating the overall process of solving the Schrödinger equation. It assembles the pieces of the algorithm and records the results. Mainly, it calls on:
+  - **schroedinger.c**: This file contains the central processes in solving the Schrödinger equation, with specific emphasis on wavefunction evolution. This file calls on:
+    - **numerov.c**: This file implements the Numerov method.
+    - **radial_eq_functions.c**: This file contains functions defining the potentials as well as the forward and backward evolution functions for some ODEs.
+
+- **init.c**: This file sets up the necessary initial parameters and variables. It prepares the necessary environment and values for the solver to function accurately. It is called by **schroedinger.c** and **main_schroedinger.c**. This file calls on:
+  - **extremum.c**: This file contains functions to find extremum points and the value of the second derivative at those points.
+  - **solve.c**: This file contains various search methods like Newton's method or the bisection search.
+  - **derivatives.c**: This file is responsible for computing the first and second derivatives.
 
 Auxiliary files include:
 **vector_mtx.c**: This file is involved in allocating memory space for 1D and 2D arrays. It is called by **numerov.c** and **main_schroedinger.c**.
