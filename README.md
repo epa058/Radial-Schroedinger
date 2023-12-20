@@ -2,7 +2,7 @@
 
 ## Objectives
 
-In this project, we aim to numerically solve the radial component of the Schrödinger equation
+In this project, we aim to numerically solve the radial component of the Schroedinger equation
 $$\left(-\frac{1}{2\mu} \frac{d^2}{dr^2} + \frac{\ell(\ell + 1)}{2\mu r^2} + V(r)\right) u_{n, \ell}(r) = E_{n, \ell} u_{n, \ell}(r)$$
 for any given confining potential V(r). 
 
