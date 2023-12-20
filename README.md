@@ -25,7 +25,8 @@ We break down the main file functions and interdependencies:
   - **derivatives.c**: This file is responsible for computing the first and second derivatives.
 
 Auxiliary files include:
-**vector_mtx.c**: This file is involved in allocating memory space for 1D and 2D arrays. It is called by **numerov.c** and **main_schroedinger.c**.
-**params.h** and **numerov_params.h**, collections of unchanging parameters from quantum mechanics and numerical analysis that assist in the calculations.
+
+- **vector_mtx.c**: This file is involved in allocating memory space for 1D and 2D arrays. It is called by **numerov.c** and **main_schroedinger.c**.
+- **params.h** and **numerov_params.h**: These are collections of unchanging parameters from quantum mechanics and numerical analysis that assist in the calculations.
 
 In summary, main_schroedinger.c is the starting point, initializing the environment with init.c, and then leveraging the specific functionalities provided in the other files like numerov.c, schroedinger.c, and solve.c to carry out the numerical solution of the Schrödinger equation.
